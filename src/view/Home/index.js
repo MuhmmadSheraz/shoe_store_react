@@ -5,9 +5,9 @@ import { Button, Container, Navbar, Nav, Col, Row } from "react-bootstrap";
 const Home = () => {
   return (
     <div className="homeWrapper">
-      <div className="header mx-3 ">
+      <div className="header mx-3 mb-5 ">
         <br />
-        <Navbar>
+        <Navbar  collapseOnSelect expand="lg">
           <Navbar.Brand href="#home">
             <div className="navbarHeader">
               <div>
@@ -20,22 +20,23 @@ const Home = () => {
               </div>
             </div>
           </Navbar.Brand>
+          <Navbar.Toggle />
+          <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
           <Nav className="ml-auto text-dark">
             <Nav.Link className="navLink active" href="#home">
               Home
             </Nav.Link>
-            <Nav.Link className="navLink" href="#features">
-              Features
+            <Nav.Link className="navLink" href="#features">o
+              Products
             </Nav.Link>
-            <Nav.Link className="navLink" href="#pricing">
-              Pricing
-            </Nav.Link>
+            
           </Nav>
+          </Navbar.Collapse>
         </Navbar>
       </div>
-      <Container fluid  className="my-5">
-        <Row>
-          <Col>
+      <div className="mt-5 hello">
+        <Row className="mt-5">
+          <Col md="6" className="mb-5" >
             <div className="content">
               <h2>MENS'S RUNNING </h2>
               <br />
@@ -44,11 +45,11 @@ const Home = () => {
               <p className="headingContent"> Adidas</p>
             </div>
           </Col>
-          <Col>
+          <Col md="6">
             <img className="imageContent" src="https://www.sneakersnstuff.com/images/88393/img-6890.jpg" />
           </Col>
         </Row>
-      </Container>
+      </div>
     </div>
   );
 };
