@@ -1,0 +1,43 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.homeWrapper {
+  height: 100vh;
+  background: white;
+}
+.navbar-expand {
+  justify-content: center;
+}
+.logo {
+  height: 70px;
+}
+.navbarHeader {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+.navLink {
+  font-size: 25px;
+  color: black !important;
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%)
+}
+.headerHr {
+  background-color: black;
+  padding: 3px;
+}
+.headingContent {
+  font-size: 95px;
+  font-weight: bold;
+}
+.imageContent {
+  width: 100%;
+  height: 800px;
+}
