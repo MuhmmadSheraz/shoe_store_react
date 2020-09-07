@@ -1,15 +1,15 @@
 import React from "react";
 import "./homeHeader.css";
-import NavbarHeader from "../Navbar/index.js"
+// import NavbarHeader from "../Navbar/index.js"
 import { Button, Container, Navbar, Nav, Col, Row } from "react-bootstrap";
 
 const Home = () => {
   return (
     <>
-     <NavbarHeader/>
-    <div className="homeWrapper">
-      <div className="mt-5 hello">
-        <Row className="mt-5">
+     {/* <NavbarHeader/> */}
+    <div className="homeWrapper mb-5">
+      <div className="hello">
+        <Row >
           <Col md="6" className="mb-5" >
             <div className="content">
               <h2>MENS'S RUNNING </h2>
@@ -17,6 +17,7 @@ const Home = () => {
               <h2>BLUE / BLACK / ORANGE</h2>
               <hr className="headerHr" />
               <p className="headingContent"> Adidas</p>
+        <button className="headerBtn">Get Yours</button>
             </div>
           </Col>
           <Col md="6">

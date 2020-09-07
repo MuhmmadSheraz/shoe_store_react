@@ -6,7 +6,7 @@ import './navbar.css'
   return (
       <div className=" mx-3">
         <Navbar  collapseOnSelect expand="lg">
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
             <div className="navbarHeader">
               <div>
                 <img
@@ -21,10 +21,10 @@ import './navbar.css'
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
           <Nav className="ml-auto text-dark">
-            <Nav.Link className="navLink active" href="#home">
+            <Nav.Link className="navLink active" href="/">
               Home
             </Nav.Link>
-            <Nav.Link className="navLink" href="#features">
+            <Nav.Link className="navLink" href="/products">
               Products
             </Nav.Link>
             
