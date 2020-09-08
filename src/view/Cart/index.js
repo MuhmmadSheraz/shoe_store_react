@@ -11,46 +11,88 @@ let Cart = () => {
   console.log(myCart);
   return (
     <div className="cart_wrapper">
-      <div className="mt-5">
+      <div className="mb-5">
         <Container>
-          <h1 className="">Shopping Cart</h1>
-          <h1 className="float-right">3 Items </h1>
-          <hr />
+          <h3 className="font-weight-bold">Shopping Cart</h3>
+          <hr className="my-4" />
+
+          {/* <Row>
+            <Col md="8">
+              <Row className="my-2">
+                <Col xsm="9" className>
+                  <h5>Product Details</h5>
+                </Col>
+                <Col xsm="3">
+                  <p className="font-weight-bold float-right align-item-center justify-content-center ">
+                    Price
+                  </p>
+                </Col>
+              </Row>
+            </Col>
+            <Col md="4">
+         
+            </Col>
+          </Row> */}
+
           <Row>
-            <Col md="9">
-              {/* cart Item */}
-              <div className="bg-secondary p-3 mt-3 no-gutter">
-                <Row className="no-gutters">
-                  <Col sm="6" className="lol">
+            <Col md="8">
+              <Row className="my-2">
+                <Col xsm="9">
+                  <div className="d-flex justify-content-space-center align-item-center ">
                     <img
                       className="img_Cart"
                       src="http://shoe-store-reactjs.surge.sh/shoes_images_by_type/2/2_01.jpg"
                     />
-                    <h5>Product Price </h5>
-                    <br />
-                    <p className="text-danger">Remove</p>
-                  </Col>
-                  <Col sm="3">
-                    <h4>Price </h4>
-                  </Col>
-                  <Col sm="3">
-                    <h4>Adidas Shoes Model Nai Pta</h4>
-                  </Col>
-                </Row>
-              </div>
-              {/* ////cart Item */}
+                    <span className="ml-2 ">
+                      <h5>Product Name </h5>
+                      <p className="text-danger ">Remove</p>
+                    </span>
+                  </div>
+                </Col>
+                <Col xsm="3" className="text-center">
+                  <p className="font-weight-bold float-right">PKR 8000 </p>
+                </Col>
+              </Row>
+              <Row className="my-2">
+                <Col xsm="9">
+                  <div className="d-flex justify-content-space-center align-item-center ">
+                    <img
+                      className="img_Cart"
+                      src="http://shoe-store-reactjs.surge.sh/shoes_images_by_type/2/2_01.jpg"
+                    />
+                    <span className="ml-2 ">
+                      <h5>Product Name </h5>
+                      <p className="text-danger ">Remove</p>
+                    </span>
+                  </div>
+                </Col>
+                <Col xsm="3" className="text-center">
+                  <p className="font-weight-bold float-right">PKR 8000 </p>
+                </Col>
+              </Row>
             </Col>
-            {/* Summray*********************** */}
-            <Col md="3">
-              <h1>Summary </h1>
+            {/* Summary*/}
+            <Col md="4">
+            <h4>Order Summary </h4>
+              <hr className="my-4" />
+
               <div className="d-flex justify-content-space-around">
-                <p>Sub Total</p>
-                <p>PKR 8000</p>
+                <h6>Items</h6>
+                <h6 className="ml-auto">PKR 8000</h6>
               </div>
-              <div className="d-flex justify-content-space-around">
-                <p>Delivery Charges </p>
-                <p>PKR 1000</p>
+              <div className="d-flex justify-content-space-around my-3">
+                <h6>Delivery Charges</h6>
+                <h6 className="ml-auto">PKR 1000</h6>
               </div>
+              <h6>Promo Code </h6>
+              <input placeholder="Enter Your Coupon" className="p-2 my-1 couponInput" w-100/>
+              <Button className="btn btn-danger">Apply</Button>
+              <hr className="my-4" />
+              <div className="d-flex justify-content-space-around my-3">
+                <h6>Total Cost</h6>
+                <h6 className="ml-auto">PKR 9000</h6>
+              </div>
+           <span className="center">   <button className="chk_btn">Checkout</button></span>
             </Col>
           </Row>
         </Container>

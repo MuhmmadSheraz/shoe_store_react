@@ -4,4 +4,21 @@
 .lol{
     padding-left: 0px;
     padding-right: 0px;
-}
+    display:flex;
+    }
+    .couponInput{
+        width: 100%;
+        padding:10px ;
+    }
+    .chk_btn{
+        width: 75%;
+        padding: 5px 10px;
+        background-color: #5D50DD;
+        color: white;
+        font-size: 18px;
+    }
+    .center{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
