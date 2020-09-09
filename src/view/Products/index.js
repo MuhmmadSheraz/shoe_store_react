@@ -35,7 +35,7 @@ let Products = () => {
                     <br />
                     <Button
                       variant="outline-primary mx-1"
-                      onClick={() => addToCartFun(product_items[x].name)}
+                      onClick={() => addToCartFun(product_items[x])}
                     >
                       Add To Cart
                     </Button>
