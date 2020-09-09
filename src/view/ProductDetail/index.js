@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./detail.css";
 // import Navbar from "../Navbar/index";
 import { Button, Container, Nav, Col, Row } from "react-bootstrap";
@@ -6,11 +6,22 @@ import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import { useParams } from "react-router-dom";
 import items from "../../product_items.json";
+import { GlobalContext } from "../../Context/GlobalState";
 
 let ProductDetail = () => {
+  const { addToCart, myCart } = useContext(GlobalContext);
   const { id } = useParams();
   const item = items[`${id}`];
-  
+  const add = (param) => {
+    console.log(myCart);
+    if (myCart && myCart.includes(param)) {
+      return alert("Item already added");
+    } else {
+      console.log("OnClicked**", param);
+      let sent = items[param]
+      addToCart(sent);
+    }
+  };
   return (
     <>
       <div>
@@ -39,7 +50,9 @@ let ProductDetail = () => {
                 popularised in the 1960s with the release of Letraset
               </p>
               <p className="font-weight-bolder">{item.prc} PKR</p>
-              <button className="addCart">Add to cart</button>
+              <button className="addCart" onClick={() => add(`${id}`)}>
+                Add to cart
+              </button>
             </Container>
           </Col>
         </Row>

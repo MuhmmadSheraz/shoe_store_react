@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Button, Container, Navbar, Nav, Col, Row } from "react-bootstrap";
+import Swal from 'sweetalert2'
 import { Link } from "react-router-dom";
 import "./cart.css";
 import product_items from "../../product_items";
@@ -7,8 +8,20 @@ import { GlobalContext } from "../../Context/GlobalState";
 import allProduct from "../../product_items.json";
 const array_Items = Object.keys(product_items);
 
+
 let Cart = () => {
-  const { myCart } = useContext(GlobalContext);
+  const { myCart,checkout_Done } = useContext(GlobalContext);
+  
+  const checkout=()=>{
+    Swal.fire({
+      position: 'top-center',
+      icon: 'success',
+      title: 'Checkout Completed !',
+      showConfirmButton: false,
+      timer: 1500
+    })
+    checkout_Done()
+  }
   let total=0
   return (
     <div className="cart_wrapper">
@@ -47,7 +60,6 @@ let Cart = () => {
                               <img className="img_Cart" src={item.img} />
                               <span className="ml-2 ">
                                 <h5>{item.name}</h5>
-                                <p className="text-danger">Remove</p>
                               </span>
                             </div>
                           </Col>
@@ -89,7 +101,7 @@ let Cart = () => {
                   </div>
                   <span className="center">
                     {" "}
-                    <button className="chk_btn">Checkout</button>
+                    <button className="chk_btn"onClick={checkout}>Checkout</button>
                   </span>
                 </Col>
               </Row>

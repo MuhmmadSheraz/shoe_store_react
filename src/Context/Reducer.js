@@ -6,6 +6,11 @@ export default (state, action) => {
         ...state,
         array: [...state.array, action.payload],
       };
+      case "EMPTY_CART":
+      return {
+        ...state,
+        array:[]
+      };
     default:
       return state;
   }

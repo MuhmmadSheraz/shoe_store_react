@@ -20,7 +20,7 @@ let Products = () => {
   return (
     <>
       <div className="product">
-        <h1 className="my-5 text-center">*** Featured Products ***</h1>
+        <h1 className="my-5 text-center main_head">*** Featured Products ***</h1>
         <hr className="productHR" />{" "}
         <Container>
           <Row className="mt-5">
@@ -34,13 +34,13 @@ let Products = () => {
                     <h4 className="price">PKR {product_items[x].prc} </h4>
                     <br />
                     <Button
-                      variant="outline-primary mx-1"
+                      variant="outline-primary mb-1"
                       onClick={() => addToCartFun(product_items[x])}
                     >
                       Add To Cart
                     </Button>
                     <Link to={`/products/${product_items[x].name}`}>
-                      <Button variant="outline-success">View Details</Button>
+                      <Button variant="outline-success mb-1 mx-1">View Details</Button>
                     </Link>
                     <br />
                   </div>

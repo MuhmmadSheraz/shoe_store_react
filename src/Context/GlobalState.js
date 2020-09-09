@@ -20,11 +20,19 @@ export const GlobalProvider = ({ children }) => {
       });
     
   };
+  const checkout_Done = (payload) => {
+   
+      dispatch({
+        type: "EMPTY_CART",
+        payload:payload,
+      });
+    
+  };
   // const remove_Cart_Item=(id)=>{
 
   // }
   return (
-    <GlobalContext.Provider value={{ myCart: state.array, addToCart }}>
+    <GlobalContext.Provider value={{ myCart: state.array, addToCart,checkout_Done }}>
       {children}
     </GlobalContext.Provider>
   );
