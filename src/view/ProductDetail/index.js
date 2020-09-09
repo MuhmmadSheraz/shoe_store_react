@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./detail.css";
-// import Navbar from "../Navbar/index";
+import Swal from 'sweetalert2'
 import { Button, Container, Nav, Col, Row } from "react-bootstrap";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
@@ -13,12 +13,17 @@ let ProductDetail = () => {
   const { id } = useParams();
   const item = items[`${id}`];
   const add = (param) => {
-    console.log(myCart);
-    if (myCart && myCart.includes(param)) {
-      return alert("Item already added");
+    if (myCart && myCart.find(x=>x.name===param)) {
+      console.log("IF")
+      return Swal.fire({
+        icon: 'warning',
+        text: 'Item Already Added',
+      });
     } else {
-      console.log("OnClicked**", param);
-      let sent = items[param]
+      console.log("ELSE")
+      console.log(myCart)
+      console.log(param)
+      let sent = items[param];
       addToCart(sent);
     }
   };

@@ -2,6 +2,7 @@ import React from "react";
 import "./homeHeader.css";
 // import NavbarHeader from "../Navbar/index.js"
 import { Button, Container, Navbar, Nav, Col, Row } from "react-bootstrap";
+import {Link} from "react-router-dom"
 
 const Home = () => {
   return (
@@ -17,7 +18,11 @@ const Home = () => {
               <h2>BLUE / BLACK / ORANGE</h2>
               <hr className="headerHr" />
               <p className="headingContent"> Adidas</p>
-        <button className="headerBtn">Get Yours</button>
+              <Link  className="navLink"  to="/products">
+              <button className="headerBtn">Get Yours</button>
+
+              </Link>
+
             </div>
           </Col>
           <Col md="6">

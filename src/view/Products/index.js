@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { Button, Container, Navbar, Nav, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2'
+
 import "./products.css";
 import product_items from "../../product_items";
 import { GlobalContext } from "../../Context/GlobalState";
@@ -11,7 +13,10 @@ let Products = () => {
 
   const addToCartFun = (param) => {
     if (myCart && myCart.includes(param)) {
-      return alert("Item already added");
+      return Swal.fire({
+        icon: 'warning',
+        text: 'Item Already Added',
+      });
     } else {
       console.log("OnClicked**", param);
       addToCart(param);
@@ -20,7 +25,9 @@ let Products = () => {
   return (
     <>
       <div className="product">
-        <h1 className="my-5 text-center main_head">*** Featured Products ***</h1>
+        <h1 className="my-5 text-center main_head">
+          *** Featured Products ***
+        </h1>
         <hr className="productHR" />{" "}
         <Container>
           <Row className="mt-5">
@@ -40,7 +47,9 @@ let Products = () => {
                       Add To Cart
                     </Button>
                     <Link to={`/products/${product_items[x].name}`}>
-                      <Button variant="outline-success mb-1 mx-1">View Details</Button>
+                      <Button variant="outline-success mb-1 mx-1">
+                        View Details
+                      </Button>
                     </Link>
                     <br />
                   </div>

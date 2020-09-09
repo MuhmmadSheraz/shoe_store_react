@@ -14,11 +14,14 @@ let Cart = () => {
   
   const checkout=()=>{
     Swal.fire({
-      position: 'top-center',
-      icon: 'success',
-      title: 'Checkout Completed !',
-      showConfirmButton: false,
-      timer: 1500
+      title: 'checkout Completed ',
+      icon:"success",
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
     })
     checkout_Done()
   }
