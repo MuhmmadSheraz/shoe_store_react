@@ -20,6 +20,9 @@ export const GlobalProvider = ({ children }) => {
       });
     
   };
+  // const remove_Cart_Item=(id)=>{
+
+  // }
   return (
     <GlobalContext.Provider value={{ myCart: state.array, addToCart }}>
       {children}
