@@ -54,7 +54,7 @@ let ProductDetail = () => {
                 electronic typesetting, remaining essentially unchanged. It was
                 popularised in the 1960s with the release of Letraset
               </p>
-              <p className="font-weight-bolder">{item.prc} PKR</p>
+              <h5 className="font-weight-bolder">{item.prc} PKR</h5>
               <button className="addCart" onClick={() => add(`${id}`)}>
                 Add to cart
               </button>
