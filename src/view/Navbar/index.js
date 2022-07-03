@@ -1,11 +1,19 @@
-import React, { useContext } from "react";
-import { Button, Container, Navbar, Nav, Col, Row ,Badge} from "react-bootstrap";
-import "./navbar.css";
-import { GlobalContext } from "../../Context/GlobalState";
-import { Link } from "react-router-dom";
+import React, { useContext } from 'react'
+import {
+  Button,
+  Container,
+  Navbar,
+  Nav,
+  Col,
+  Row,
+  Badge,
+} from 'react-bootstrap'
+import './navbar.css'
+import { GlobalContext } from '../../Context/GlobalState'
+import { Link } from 'react-router-dom'
 
 const NavbarHeader = () => {
-  const { myCart } = useContext(GlobalContext);
+  const { myCart } = useContext(GlobalContext)
   return (
     <div className=" mx-3">
       <Navbar collapseOnSelect expand="lg">
@@ -28,21 +36,27 @@ const NavbarHeader = () => {
         >
           <Nav className="ml-auto text-dark">
             <Nav.Link className="navLink active">
-              <Link  className="navLink" to="/">Home</Link>
+              <Link className="navLink" to="/">
+                Home
+              </Link>
             </Nav.Link>
             <Nav.Link className="navLink">
-              <Link  className="navLink"  to="/products">Products</Link>
+              <Link className="navLink" to="/products">
+                Products
+              </Link>
             </Nav.Link>
             <Nav.Link className="navLink">
-              <Link  className="navLink " to="/cart">My Cart
-              <Badge pill variant="dark ml-2 " className="badgePill">
-    {myCart.length}
-  </Badge></Link>
+              <Link className="navLink " to="/cart">
+                My Cart
+                <Badge pill variant="dark ml-2 " className="badgePill">
+                  {myCart.length}
+                </Badge>
+              </Link>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
     </div>
-  );
-};
-export default NavbarHeader;
+  )
+}
+export default NavbarHeader
